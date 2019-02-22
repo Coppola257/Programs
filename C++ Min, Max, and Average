@@ -1,0 +1,85 @@
+/*
+ Program Name: Min, Max, and Average
+ Program Function: Takes 5 doubles, finds min and max of them, and finds the average of them
+ Date: 2/5/2019
+ Author: Anthony Coppola
+*/
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+        double a;
+        double b;
+        double c;
+        double d;
+        double e; // 5 double variables
+        double x;
+        double y;// Variables for min and max
+
+        int f;
+        int g;// 2 integer variables
+        int z;// Variable for even or odd
+
+        cout << "Input five doubles: " << endl;
+        cin >> a;
+        cin >> b;
+        cin >> c;
+        cin >> d;
+        cin >> e;
+        cout << a << "," << b << "," << c << "," << d << "," << e << endl;
+
+        if (a > b) {
+                x = a;
+}
+        else
+                x = b;
+
+        if (x > c) {
+}
+        else
+                x = c;
+
+        if (x > d) {
+}
+        else
+                x = d;
+
+        if (x > e) {
+                cout << "The max is: " << x << endl;
+}
+        else
+                cout << "The max is: " << e << endl;
+        // end of max
+
+        if (a < b) {
+                y = a;
+}
+        else
+                y = b;
+
+        if (y < c) {
+}
+        else
+                y = c;
+
+        if (y < d) {
+}
+        else
+                y = d;
+
+        if (y < e) {
+                cout << "The min is: " << y << endl;
+}
+        else
+                cout << "The min is: " << e << endl;
+        // end of min
+
+        cout << "The average is: " << (a+b+c+d+e)/5 << endl;
+        // end of average
+
+return 0;
+}
