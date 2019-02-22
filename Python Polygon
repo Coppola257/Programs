@@ -1,0 +1,26 @@
+'''
+Pablo Balarezo
+Anthony Coppola
+Polygon
+Function: Takes user input of sides, length, and color and makes a polygon out of it
+10/06/2017
+'''
+import turtle
+import rainbow
+
+
+n = eval(input("Enter the sides of the polygon:"))
+sidelength = eval(input("Enter the sides length of the polygon:"))
+insidecolor = input("What color to use for the inside of the shape? ") #User input of sides, length and color
+
+turtle.begin_fill() 
+
+turtle.pensize(3) #Thickness of pen
+for i in range(n): 
+    turtle.fillcolor(insidecolor)
+    turtle.pencolor(rainbow.nextRainbowColor(7))
+    turtle.forward(sidelength)
+    turtle.left(360/n) #Uses the inputs to make the polygon
+    
+turtle.end_fill()
+turtle.done()
