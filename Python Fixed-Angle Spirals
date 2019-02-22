@@ -1,0 +1,29 @@
+'''
+Pablo Balarezo
+Anthony Coppola
+CSC101 Lab 6
+Part 3: Fixed-angle spirals
+10/06/2017
+Function: Draws a spiral based on user-inputs and then fills the spiral based on the color the user chooses
+'''
+import turtle
+import rainbow
+
+n = eval(input("Enter the sides of the polygon:"))
+sidelength = eval(input("Enter the sides length of the polygon:"))
+angle = eval(input("Enter the turning angle:"))
+insidecolor = input("What color to use for the inside of the shape? ") #User inputs for sides, length, angle, and color
+
+turtle.begin_fill() 
+
+turtle.pensize(8) #Thickness of the pen
+
+for i in range(n): 
+    turtle.fillcolor(insidecolor)
+    turtle.pencolor(rainbow.nextRainbowColor(7))    
+    turtle.forward(sidelength)
+    turtle.left(angle)
+    sidelength += 5 #For loop that takes the inputs and creates the spiral
+    
+turtle.end_fill()
+turtle.done()
