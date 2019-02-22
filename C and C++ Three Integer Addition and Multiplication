@@ -1,0 +1,58 @@
+/*
+ Program Name: Three integer addition and multiplication in C
+ Program Function: Takes three integers and prints them out. Then adds the first two and multiplies that by the third value.
+ Date: 1/17/2019
+ Author: Anthony Coppola
+*/
+
+#include <stdio.h>
+
+int main() {
+
+        int x;
+        int y;
+        int z;
+
+        fprintf(stdout, "Input three integers:\n");
+        scanf("%d", &x);
+        scanf("%d", &y);
+        scanf("%d", &z);
+        fprintf(stdout, "%d, %d, %d\n", x, y, z);
+
+        int a = x + y;
+        int b = a * z;
+
+        fprintf(stdout, "%d\n", b);
+
+        return 0;
+}
+
+/*
+Program Name: Three integer addition and multiplication in C++
+Program Function: Takes three integers and prints them out. Then adds the first two and multiplies it by the third one.
+Date: 1/17/2019
+Author: Anthony Coppola
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+        int x;
+        int y;
+        int z;
+
+        cout << "Input three integers:" << endl;
+        cin >> x;
+        cin >> y;
+        cin >> z;
+        cout << x << "," << y << "," << z << endl;
+
+        int a = x + y;
+        int b = a * z;
+
+        cout << b << endl;
+}
+
