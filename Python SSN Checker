@@ -1,0 +1,16 @@
+'''
+Anthony Coppola
+Elaine Durkin
+Check SSN
+Function: Takes the user input and makes sure that it is a valid SSN
+11/20/2017
+'''
+
+ssn = input("Enter SSN: ") #User input of their SSN
+
+if (ssn[3] == '-' and ssn[6] == '-' and \
+    len(ssn) == 11 and ssn[0:3].isdigit() and \
+    ssn[4:6].isdigit() and ssn[7:11].isdigit()): #Makes sure that at each postion in the SSN there is a digit or '-' and that the length is 11
+    print("Valid SSN")
+else:
+    print("Invalid SSN")
