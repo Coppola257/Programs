@@ -1,0 +1,65 @@
+'''
+Pablo Balarezo
+Anthony Coppola
+Matthew McDonald
+Function: Is an adding game that increases in difficulty as you keep getting answers right. You start with 3 lives but you can get more.
+12/14/2017
+'''
+print()
+print("Welcome to the Adding Game!")
+print()
+
+def generateAdders(history, low, high):
+    
+    a = random.randint(low,high) 
+    b = random.randint(low,high) 
+    
+    x = str(a) + ',' + str(b)
+    y = str(b) + ',' + str(a)
+    while x in history or y in history: #this section makes sure that the same equation isn't coming up twice, ex. 12+20 will only show up once. (program doesn't determine that 20+12 as the same, so this still might occur)
+        a = random.randint(low,high) #produces first number 
+        b = random.randint(low,high) #produces second number
+        x = str(a) + ',' + str(b)
+        y = str(b) + ',' + str(a)
+    
+    history.append(x)
+    history.append(y)
+        
+    return a,b
+    
+import random
+
+lives=3
+score=0
+score2 = 0
+low = 10
+high = 20
+history=[]
+
+while lives > 0 :
+    a,b = generateAdders(history, low, high)
+    
+    answer = a + b
+    print("Your score is:" , score) #this prints your score
+    print("You have" , lives, "lives") #this prints how many lives you have left
+    print ("The sum of", a,"plus", b," is?") #this puts the 2 numbers in the form of a question. ex. what is a + b?
+    guess =int(input("what is your guess?")) #asks for your question
+    if answer == guess: # this if statement adds 100 to the score if you answer correctly
+        print ("You  Won")
+        score = score + 100
+        score2 = score2 + 100
+        if score2 > 500: # For this if statement if your score goes over 500 you get an extra life
+            lives = lives +1
+            score2 = 0
+            low *= 5
+            high *= 10
+    elif answer > guess: # this elif statement removes a life if your guess was lower than the answer
+        print ("Wrong your answer was too low")
+        lives = lives - 1
+        
+    elif answer < guess: # this elif statement removes a life if your guess was higher than the answer
+        print ("Wrong your answer was too high")
+        lives = lives - 1
+        
+    if lives == 0: # This if statement makes the game end if you have zero lives
+        print ("Game Over! Score",score)
