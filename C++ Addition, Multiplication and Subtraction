@@ -1,0 +1,50 @@
+/*
+ Program Name: Addition, Multiplication, Subtraction in C++
+ Program Function: Takes 3 integers and adds 2 of them, adds 3 of them, multiplies 2 of them, multiplies 3 of them, and subtracts 2 of them.
+ Date: 1/24/2019
+ Author: Anthony Coppola
+*/
+
+#include <iostream>
+#include "addem2.h"
+#include "multiply.cpp"
+#include "sub.cpp" // Libraries I added
+
+using namespace std;
+
+int main() {
+
+        int a;
+        int b;
+        int c;
+
+        int d;
+        int e;
+        int f;
+        int g;
+        int h;
+
+        cout << "Input three integers:" << endl;
+        cin >> a;
+        cin >> b;
+        cin >> c; // Dereferences the variables from memory
+        cout << a << "," << b << "," << c << endl;
+
+        d = addem(a,b);
+        e = addem(a,b,c); // Gets the addition command from the addem library
+
+        cout << a << "+" << b << "=" << d << endl;
+        cout << a << "+" << b << "+" << c << "=" << e << endl;
+
+        f = multiply(a,b);
+        g = multiply(a,b,c); // Gets the multiplication command from the multiply library
+
+        cout << a << "*" << b << "=" << f << endl;
+        cout << a << "*" << b << "*" << c << "=" << g << endl;
+
+        h = sub(a,b); // Gets the subtraction command from the sub library
+
+        cout << a << "-" << b << "=" << h << endl;
+
+        return 0;
+}
