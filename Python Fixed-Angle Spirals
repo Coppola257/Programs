@@ -1,8 +1,7 @@
 '''
 Pablo Balarezo
 Anthony Coppola
-CSC101 Lab 6
-Part 3: Fixed-angle spirals
+Fixed-angle spirals
 10/06/2017
 Function: Draws a spiral based on user-inputs and then fills the spiral based on the color the user chooses
 '''
