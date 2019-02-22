@@ -1,0 +1,17 @@
+'''
+Anthony Coppola
+Average Value
+Function: Takes user input on how many items and how much they are and gives you the total cost and average of them
+10/6/2017
+'''
+n = eval(input("How many items are being bought?")) #User input on how many items
+if n>0: #Makes sure you enter something
+    totalprice = 0
+    for i in range(n):
+        price = eval(input("enter the cost of the item: ")) #User input for how much for each item
+        totalprice += price #Adds them up
+    print("the total cost is", totalprice, "$")
+    average = totalprice / n #Computes the average
+    print("The average is", average)
+else:
+    print("stop")
