@@ -1,0 +1,17 @@
+'''
+Anthony Coppola
+Elaine Durkin
+Caesar Cipher
+Function: Takes the user input of a word and a key (number) and shifts each letter in the word depending on the key
+11/20/2017
+'''
+
+word = input("Enter word: ")
+key = eval(input("Enter key: ")) #User inputs for the word and the key(number)
+
+Cipher = ""
+for char in word:
+    shifted_ascii = ((94+(ord(char)+key)-33)%94)+33
+    Cipher += chr(shifted_ascii) #Using the ascii and the word and key, it will cipher the word
+    
+print("The cipher is:", Cipher)
