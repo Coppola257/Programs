@@ -1,0 +1,67 @@
+/*
+ Program Name: Hangman
+ Program Function: Simple hangman game
+ Date: 2/12/2019
+ Author: Anthony Coppola
+*/
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main() {
+
+        char a;
+        char b;
+        int c;
+        int d;
+        int e=0; // Variales for the letters and guesses
+
+        char answer[] = "HANGMAN";
+        char guess[] = "_______"; // will replace the "_" with letters as the user guesses them right
+
+        int len = strlen(answer);
+
+        d=0; // set guesses to 0
+
+        cout << "The answer contains " << len << " letters." <<  endl;
+        cout << "10 incorrect guesses and you lose" << endl;
+
+        while (d<=9){
+                cout << guess << endl;
+                cout << "Enter a letter: " << endl;
+                cin >> a;
+                b = toupper(a);
+                cout << "You guessed: " << b << endl;
+
+                for(c=0; c<len; c++) {
+                        if(answer[c]==b) {
+                                guess[c] = b;
+                                e=1; // if the letter equals a letter in the word e = 1
+}
+}
+                if(e==1)
+                        e=0;
+                else {
+                        cout << "Wrong " << b << " is not a letter in the word" << endl;
+                        d++; // increments wrong guesses by 1
+}
+
+                for(c=0; c<len; c++) {
+                        if(guess[c]=='_')
+                                e=1; // if the guess is right it will replace "_" with the letter guessed
+}
+                if(e==1) {
+                        e=0;
+}
+                        else{
+                                cout << "You win! It was " << answer <<  endl;
+                                break;
+}
+}
+                        if (d==10) {
+                                cout << "You lose! It was " << answer <<  endl; // when the user guesses 10 times incorrectly they lose
+}
+        return 0;
+}
