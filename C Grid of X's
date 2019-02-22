@@ -1,0 +1,31 @@
+/*
+ Program Name: Grid of X's
+ Program Function: Takes two integers from the user and returns a grid of X's
+ Date: 1/31/2019
+ Author: Anthony Coppola
+*/
+
+#include <stdio.h>
+
+int main() {
+
+        int l;
+        int w;
+
+        int x;
+        int y;// variables for length and width
+
+        fprintf(stdout, "Please input an integer for the length: ");
+        scanf("%d", &l);// dereferences it from memory
+
+        fprintf(stdout, "Please input an integer for the width: ");
+        scanf("%d", &w);// dereferences it from memory
+
+        // nested loop for grid of X's
+        for (y=0; y<w; y++){
+                for (x=0; x<l; x++){
+                        fprintf(stdout,"X");
+}                       fprintf(stdout,"\n");
+}
+        return 0;
+}
